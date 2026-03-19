@@ -58,3 +58,130 @@
         /* Efeito de Alerta Crítico */
         @keyframes status-alert { 0%, 100% { border-left-color: var(--danger); color: var(--danger); } 50% { border-left-color: #eee; color: #333; } }
         .danger-mode { animation: status-alert 0.6s infinite; background: rgba(192, 57, 43, 0.05) !important; }
+
+        /* ===== RESPONSIVIDADE ===== */
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        height: auto;
+        min-height: 100vh;
+        overflow: auto;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 15px 10px;
+        gap: 5px;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+        display: none;
+    }
+
+    .nav-link {
+        padding: 12px 5px;
+        text-align: center;
+        font-size: 10px;
+        border-left: none;
+        border-bottom: 2px solid transparent;
+    }
+
+    .nav-link.active {
+        border-left-color: transparent;
+        border-bottom-color: var(--accent);
+    }
+
+    nav div:last-child {
+        display: none;
+    }
+
+    main {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    header h1 {
+        font-size: 14px;
+    }
+
+    header small {
+        font-size: 10px;
+    }
+
+    .viewport-container {
+        height: 300px;
+    }
+
+    .safety-badge {
+        left: 10px;
+        top: 10px;
+        padding: 6px 10px;
+        font-size: 9px;
+    }
+
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .info-card {
+        padding: 15px 10px;
+    }
+
+    .info-card span {
+        font-size: 16px;
+    }
+
+    .mini-graph {
+        margin-top: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .viewport-container {
+        height: 250px;
+    }
+
+    .safety-badge {
+        font-size: 8px;
+        padding: 4px 8px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .info-card {
+        padding: 12px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .info-card label {
+        width: 100%;
+        margin-bottom: 5px;
+        font-size: 8px;
+    }
+
+    .info-card span {
+        font-size: 14px;
+    }
+
+    .mini-graph {
+        width: 100%;
+        margin-top: 8px;
+    }
+}
