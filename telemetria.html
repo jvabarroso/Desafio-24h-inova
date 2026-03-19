@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>LOGOS | Telemetria e Estabilidade</title>
+    <link rel="stylesheet" href="css/telemetria.css">
+</head>
+<body>
+    <nav>
+        <div class="brand">LOG<span>OS</span></div>
+        <a href="index.html" class="nav-link">01. MONITOR_FLUXO</a>
+        <a href="carga.html" class="nav-link">02. MAPA_CARGA</a>
+        <a href="telemetria.html" class="nav-link active">03. TELEMETRIA_SMART</a>
+        <div style="margin-top: auto; padding: 0 25px; font-size: 9px; color: #64748b;">SISTEMA_ADS_V6.0<br>CANANÉIA_2026</div>
+    </nav>
+
+    <main>
+        <header>
+            <div>
+                <h1>STREAM_SENSOR_04 // SIMULAÇÃO_CINEMÁTICA</h1>
+                <small style="color: #64748b; font-weight: 600; text-transform: uppercase;">Estabilidade e Compensação Ativa</small>
+            </div>
+            <div id="clock" style="font-size: 14px; color: var(--accent); font-weight: 800; font-family: 'JetBrains Mono';">00:00:00</div>
+        </header>
+
+        <div class="viewport-container">
+            <div class="safety-badge" id="main-badge">● INICIALIZANDO MONITOR...</div>
+            <canvas id="kineticCanvas"></canvas>
+        </div>
+
+        <footer>
+            <div class="info-card">
+                <label>AIRBAG_FRONT_ESQ</label><span id="psi1">--</span><span class="unit">PSI</span>
+                <div class="mini-graph"><div class="graph-bar" id="b1"></div></div>
+            </div>
+            <div class="info-card">
+                <label>AIRBAG_FRONT_DIR</label><span id="psi2">--</span><span class="unit">PSI</span>
+                <div class="mini-graph"><div class="graph-bar" id="b2"></div></div>
+            </div>
+            <div class="info-card">
+                <label>INCLINAÇÃO_LAT</label><span id="inc">--</span><span class="unit">°</span>
+                <div class="mini-graph"><div class="graph-bar" id="b3"></div></div>
+            </div>
+            <div class="info-card">
+                <label>STATUS_SISTEMA</label><span id="status-txt" style="color: var(--safe);">ESTÁVEL</span>
+                <div class="mini-graph"><div class="graph-bar" id="b4" style="width: 100%; background: var(--safe);"></div></div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="js/telemetria.js">
+        
+    </script>
+</body>
+</html>

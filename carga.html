@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>LOGOS | Cargo Optimization</title>
+<link rel="stylesheet" href="css/carga.css">
+</head>
+<body>
+    <nav>
+        <div class="brand">LOG<span>OS</span></div>
+        <a href="index.html" class="nav-link">01. FLOW_MONITOR</a>
+        <a href="carga.html" class="nav-link active">02. CARGO_MAP</a>
+        <a href="telemetria.html" class="nav-link">03. SMART_TELEMETRY</a>
+        <div style="margin-top: auto; padding: 0 25px; font-size: 9px; color: #64748b;">LOGOS_SOLVER_V4.5<br>FATEC_REGISTRO</div>
+    </nav>
+
+    <main>
+        <div class="header-meta">
+            <h1>LOGOS_SOLVER // LOAD_OPTIMIZATION</h1>
+            <div id="iter-counter" style="font-size: 12px; color: var(--accent); font-weight: 800;">ITER: 0</div>
+        </div>
+
+        <div class="viewport-wrapper">
+            <canvas id="cargoCanvas"></canvas>
+            <div class="hud-overlay">
+                <div class="hud-stat"><label>Load ID</label><span>BATCH-882</span></div>
+                <div class="hud-stat"><label>Constraint</label><span style="color:#005fb8">STANDARD</span></div>
+            </div>
+            <div class="algo-terminal" id="algoTerminal"></div>
+        </div>
+
+        <footer>
+            <div class="data-card"><label>EFICIÊNCIA_VOL</label><span id="finalEff">0.0</span><span class="unit">%</span></div>
+            <div class="data-card"><label>PESO_TOTAL</label><span id="finalWeight">0</span><span class="unit">kg</span></div>
+            <div class="data-card"><label>ITENS_CONSOLID</label><span id="finalItems">0</span><span class="unit">un</span></div>
+            <div class="data-card"><label>CÁLCULO_TEMPO</label><span id="calcTime">0.0</span><span class="unit">s</span></div>
+        </footer>
+    </main>
+
+    <script src="js/carga.js">
+        
+    </script>
+</body>
+</html>

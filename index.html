@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>LOGOS | Industrial Flow Analysis</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <nav>
+        <div class="brand">LOG<span>OS</span></div>
+        <a href="index.html" class="nav-link active" id="nav-index">01. FLOW_MONITOR</a>
+        <a href="carga.html" class="nav-link" id="nav-carga">02. CARGO_MAP</a>
+        <a href="telemetria.html" class="nav-link" id="nav-telemetria">03. SMART_TELEMETRY</a>
+        <div style="margin-top: auto; padding: 0 25px; font-size: 9px; color: #64748b;">LOGOS_SYSTEM_V4.5<br>CANANÉIA_2026</div>
+    </nav>
+
+    <main>
+        <div class="header-meta">
+            <h1>LINE_01 // HIGH_DENSITY_SCAN</h1>
+            <div id="pps-counter" style="font-size: 12px; color: var(--accent); font-weight: 800;">PPS: 0.0</div>
+        </div>
+
+        <div class="viewport-wrapper">
+            <canvas id="flowCanvas"></canvas>
+            <div class="hud-overlay">
+                <div class="hud-stat"><label>Current SKU</label><span id="curSKU">BOOTING...</span></div>
+                <div class="hud-stat"><label>Confidence</label><span>99.8%</span></div>
+            </div>
+            <div class="event-stream" id="eventStream"></div>
+        </div>
+
+        <footer>
+            <div class="data-card"><label>AVG_WIDTH</label><span id="avgW">0.0</span><span class="unit">cm</span></div>
+            <div class="data-card"><label>AVG_HEIGHT</label><span id="avgH">0.0</span><span class="unit">cm</span></div>
+            <div class="data-card"><label>TOTAL_ITEMS</label><span id="totalItems">0</span><span class="unit">un</span></div>
+            <div class="data-card"><label>TOTAL_VOL</label><span id="totalVol">0.0</span><span class="unit">m³</span></div>
+        </footer>
+    </main>
+</body>
+<script src="js/index.js"></script>
+</html>
